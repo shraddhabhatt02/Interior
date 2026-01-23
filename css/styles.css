@@ -29,7 +29,7 @@ section {
 
 .hero {
   min-height: 100vh;
-  background: url(/images/hero-img.png) center / cover no-repeat;
+  background: url(../images/hero-img.png) center / cover no-repeat;
   padding-top: 9rem;
   display: flex;
   flex-direction: column;
@@ -415,7 +415,7 @@ figcaption {
 
 .featured-section {
   position: relative;
-  background: url('/images/features.png') center/cover no-repeat;
+  background: url('../images/features.png') center/cover no-repeat;
   min-height: 90vh;
   display: flex;
   z-index: 2;
