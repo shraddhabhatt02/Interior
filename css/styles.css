@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  /* border: 1px solid red; */
 }
 
 :root {
@@ -21,51 +22,24 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  padding: 3rem 5rem;
+.container {
+  max-width: 1350px;
+  width: 100%;
+  padding-bottom: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5rem;
+  padding-inline: 2rem;
 }
 
-/* hero css */
-
-.hero {
-  min-height: 100vh;
-  background: url(../images/hero-img.png) center / cover no-repeat;
-  padding-top: 9rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 1.5rem;
-}
-
-.hero,
-.featured-section {
-  background-attachment: scroll;
-}
-
-.hero-heading {
-  color: var(--white-clr);
-  max-width: 900px;
-  font-size: clamp(3rem, 4vw, 3.5rem);
-  line-height: 1.2;
-  font-weight: 400;
-}
-
-.hero-para {
-  color: var(--white-clr);
-  max-width: 650px;
-  font-size: 1rem;
-  text-align: center;
-  line-height: 1.6;
-}
+/* header css */
 
 .navbar {
   position: absolute;
   top: 2rem;
   left: 50%;
   width: 90%;
-  max-width: 1350px;
+  /* max-width: 1350px; */
   margin-inline: auto;
   transform: translateX(-50%);
   z-index: 10;
@@ -180,6 +154,7 @@ section {
   border-radius: 999px;
   font-size: 0.9rem;
   white-space: nowrap;
+  z-index: 10;
   transition: all 0.5s ease-in-out;
 }
 
@@ -201,12 +176,55 @@ section {
   color: var(--white-clr);
 }
 
+/* home css */
+
+.home {
+  min-height: 100vh;
+  background: url(../images/hero-img.png) center / cover no-repeat;
+  padding-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  /* padding-inline: 1rem; */
+}
+
+.home-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.home,
+.featured-section {
+  background-attachment: scroll;
+}
+
+.home-heading {
+  color: var(--white-clr);
+  max-width: 900px;
+  font-size: clamp(3rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.home-para {
+  color: var(--white-clr);
+  max-width: 650px;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
 .exp-btn {
   font-size: 1.1rem;
   margin-right: auto;
   display: inline-flex;
   line-height: 1.3rem;
   margin-bottom: 6rem;
+  cursor: pointer;
 }
 
 /* category css */
@@ -254,7 +272,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .categories-card {
@@ -279,15 +297,12 @@ figcaption {
   text-align: center;
 }
 
-.stats {
-  padding: 5rem 0;
-}
-
 .stats-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 2rem;
   justify-content: space-between;
+  padding: 4rem 1rem;
   text-align: left;
 }
 
@@ -314,12 +329,11 @@ figcaption {
 
 /* about us css */
 
-.about-us .container {
-  max-width: 1200px;
+.about-wrapper {
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 3rem;
+  /* padding-inline: 2rem; */
 }
 
 .about-img {
@@ -334,6 +348,7 @@ figcaption {
   max-width: 500px;
   height: auto;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .about-label {
@@ -362,6 +377,7 @@ figcaption {
 .about-desc {
   font-size: 1rem;
   line-height: 1.6;
+  max-width: 500px;
   color: var(--black-clr);
 }
 
@@ -422,25 +438,18 @@ figcaption {
 }
 
 .featured-overlay {
-  pointer-events: none;
-  z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
 }
 
-.featured-container {
+.featured-wrapper {
   position: relative;
-  max-width: 1200px;
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   color: var(--white-clr);
   gap: 2rem;
-}
-
-.featured-left,
-.featured-right {
-  flex: 1 1 100%;
 }
 
 .featured-left h2 {
@@ -451,7 +460,6 @@ figcaption {
 }
 
 .featured-right {
-  flex: 1 1 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -463,7 +471,6 @@ figcaption {
 .featured-right p {
   line-height: 1.7;
   margin-bottom: 2rem;
-  opacity: 0.9;
 }
 
 .featured-actions {
@@ -481,13 +488,13 @@ figcaption {
   color: var(--white-clr);
 }
 
-/* review css */
+/* testimonial css */
 
-.testimonial-section {
+/* .testimonial-section {
   max-width: 1350px;
   margin: 8rem auto;
   padding: 0;
-}
+} */
 
 .testimonial-header {
   display: flex;
@@ -542,13 +549,13 @@ figcaption {
 
 .testimonial-card img {
   width: 100%;
-  height: 360px;
+  aspect-ratio: 16/10;
   object-fit: cover;
   border-radius: 0.6rem;
 }
 
 .testimonial-text {
-  margin: 1.8rem 0;
+  margin: 1.5rem 0;
   color: #555;
   font-size: 1rem;
   line-height: 1.8;
@@ -577,10 +584,6 @@ hr {
 }
 
 /* faqs css */
-
-.faq-section {
-  padding: 5rem;
-}
 
 .faq-container {
   max-width: 1350px;
@@ -645,7 +648,7 @@ hr {
 .faq-question i {
   margin-left: auto;
   font-style: normal;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 .faq-question i {
@@ -658,7 +661,7 @@ hr {
 }
 
 .faq-answer {
-  padding: 0 2rem 1.6rem 2rem;
+  padding: 0 2rem 1.4rem 2rem;
   font-size: 1rem;
   color: #666;
   display: none;
@@ -803,9 +806,9 @@ hr {
 /* Responsive css */
 
 @media (max-width: 1024px) {
-  section {
+  /* .container {
     padding: 3rem 3rem;
-  }
+  } */
 
   .nav-links {
     gap: 1.5rem;
@@ -825,9 +828,11 @@ hr {
     max-width: 100%;
   }
 
-  .about-us .container {
+  .about-us .about-wrapper {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 2rem;
   }
 
   .about-img {
@@ -836,9 +841,13 @@ hr {
 
   .about-title,
   .about-desc {
-    max-width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
   }
 
+  .about-content .btn {
+    align-self: center;
+  }
   .gallery-inner {
     flex-direction: column;
   }
@@ -864,15 +873,19 @@ hr {
     grid-template-columns: 1fr;
   }
 
+  .faq-left {
+    text-align: center;
+  }
+
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  section {
+  /* section {
     padding: 2.5rem 1.5rem;
-  }
+  } */
 
   .nav-links {
     display: none;
@@ -891,16 +904,17 @@ hr {
     margin-top: 1.5rem;
   }
 
-  .hero-heading {
+  .home-heading {
     font-size: 2.3rem;
   }
 
-  .hero-para {
+  .home-para {
     font-size: 0.8rem;
   }
 
   .categories-card {
-    flex: 1 1 100%;
+    flex: 1 1 calc(50% - 2rem);
+    max-width: 100%;
   }
 
   .stats-grid {
@@ -992,7 +1006,7 @@ hr {
 }
 
 @media (max-width: 480px) {
-  .hero-heading {
+  .home-heading {
     font-size: 2rem;
   }
 
