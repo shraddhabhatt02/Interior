@@ -490,12 +490,6 @@ figcaption {
 
 /* testimonial css */
 
-/* .testimonial-section {
-  max-width: 1350px;
-  margin: 8rem auto;
-  padding: 0;
-} */
-
 .testimonial-header {
   display: flex;
   justify-content: space-between;
@@ -536,6 +530,7 @@ figcaption {
 
 .swiper-slide {
   height: auto;
+  display: flex;
 }
 
 .swiper-wrapper {
@@ -547,6 +542,12 @@ figcaption {
   gap: 0.3rem;
 }
 
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .testimonial-card img {
   width: 100%;
   aspect-ratio: 16/10;
@@ -555,6 +556,7 @@ figcaption {
 }
 
 .testimonial-text {
+  flex-grow: 1;
   margin: 1.5rem 0;
   color: #555;
   font-size: 1rem;
@@ -913,7 +915,7 @@ hr {
   }
 
   .categories-card {
-    flex: 1 1 calc(50% - 2rem);
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
