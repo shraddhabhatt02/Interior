@@ -176,6 +176,16 @@ html {
   color: var(--white-clr);
 }
 
+.exp-btn {
+  font-size: 1.1rem;
+  margin-right: auto;
+  display: inline-flex;
+  line-height: 1.3rem;
+  margin-bottom: 6rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
 /* home css */
 
 .home {
@@ -216,15 +226,6 @@ html {
   font-size: 1rem;
   text-align: center;
   line-height: 1.6;
-}
-
-.exp-btn {
-  font-size: 1.1rem;
-  margin-right: auto;
-  display: inline-flex;
-  line-height: 1.3rem;
-  margin-bottom: 6rem;
-  cursor: pointer;
 }
 
 /* category css */
