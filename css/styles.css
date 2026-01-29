@@ -806,6 +806,122 @@ hr {
   text-decoration: none;
 }
 
+/* Get a quote form css */
+
+.quote-popup {
+  background: var(--navbar-clr);
+  padding: 1.8rem 2.1rem;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 16px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  font-size: 1.7rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.quote-header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.quote-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.quote-header p {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.quote-form label {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0.7rem 0 0.3rem;
+}
+
+.quote-form input,
+.quote-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background: #efece6;
+  font-size: 1rem;
+}
+
+.quote-form select {
+  width: 100%;
+  padding: 0.6rem 2.5rem 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #efece6;
+  font-size: 1rem;
+  appearance: none;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: translateY(-60%) rotate(45deg);
+  pointer-events: none;
+}
+
+.quote-form textarea {
+  height: 5rem;
+}
+
+.two-col {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.col-info {
+  flex: 1;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 0.9rem;
+}
+
+.mfp-zoom-in .mfp-content {
+  opacity: 0;
+  transform: scale(0.7) translateY(2rem);
+  transition: all 0.3s ease-out;
+}
+
+.mfp-zoom-in.mfp-ready .mfp-content {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.mfp-zoom-in.mfp-removing .mfp-content {
+  opacity: 0;
+  transform: scale(0.7) translateY(2rem);
+}
+
 /* Responsive css */
 
 @media (max-width: 1024px) {

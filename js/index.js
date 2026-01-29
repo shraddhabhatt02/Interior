@@ -54,3 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+$(document).ready(function () {
+  $('.popup-with-form').magnificPopup({
+    type: 'inline',
+    mainClass: 'mfp-zoom-in',
+    removalDelay: 300,
+    closeBtnInside: true,
+  });
+});

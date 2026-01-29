@@ -23,6 +23,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
   </head>
   <body>
     <!-- header section starts -->
@@ -217,7 +221,7 @@
             personality and enhance everyday living.
           </p>
           <div class="featured-actions">
-            <a href="#" class="btn"
+            <a href="#quote-form-popup" class="btn popup-with-form"
               >Get a Quote &nbsp;
               <i class="fa-solid fa-arrow-up-right-from-square"></i
             ></a>
@@ -455,8 +459,64 @@
         <a href="#">Terms and Conditions</a>
       </div>
     </section>
-
     <!-- Footer section ends -->
+
+    <!-- Get a Quote Popup Form starts -->
+
+    <div id="quote-form-popup" class="mfp-hide quote-popup">
+      <button class="mfp-close custom-close">&times;</button>
+
+      <div class="quote-header">
+        <h2>Request Your Quote</h2>
+        <p>Experience bespoke interior design tailored to your lifestyle.</p>
+      </div>
+
+      <form class="quote-form">
+        <label>FULL NAME</label>
+        <input type="text" placeholder="E.g. Alexander Sterling" required />
+
+        <div class="two-col">
+          <div class="col-info">
+            <label>EMAIL ADDRESS</label>
+            <input type="email" placeholder="alexander@example.cc" required />
+          </div>
+          <div class="col-info">
+            <label>PHONE NUMBER</label>
+            <input type="tel" placeholder="+1 (555) 000-0000" required />
+          </div>
+        </div>
+
+        <label for="property">PROPERTY TYPE</label>
+        <div class="select-wrapper">
+          <select id="property" name="property">
+            <option value="" disabled selected>Select Option</option>
+            <option value="apartment">Apartment</option>
+            <option value="villa">Villa</option>
+            <option value="office">Office</option>
+          </select>
+        </div>
+
+        <label for="budget">BUDGET RANGE</label>
+        <div class="select-wrapper">
+          <select id="budget" name="budget">
+            <option value="" disabled selected>Select Range</option>
+            <option value="5l-10l">₹5L - ₹10L</option>
+            <option value="10l-20l">₹10L - ₹20L</option>
+            <option value="20l+">₹20L+</option>
+          </select>
+        </div>
+
+        <label>PROJECT NOTES</label>
+        <textarea placeholder="Tell us more about your vision..."></textarea>
+
+        <button type="submit" class="btn submit-btn">Submit Request</button>
+      </form>
+    </div>
+
+    <!-- Get a Quote Popup Form ends -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
       integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
